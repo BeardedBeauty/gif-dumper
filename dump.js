@@ -4,7 +4,7 @@ window.onload = function () {
     return
 };
 
-var gifSelect = ["adventure time", "guinea pigs", "area 51", "tesla"]
+var gifSelect = ["adventure time", "guinea pigs", "area 51", "cheese"]
 
 $(document).on("click", ".pull", function () {
     var getin = $(this).attr("data-title");
@@ -19,13 +19,16 @@ $(document).on("click", ".pull", function () {
             var results = response.data;
             for (var i = 0; i < results.length; i++) {
                 var gifDiv = $("<div class = 'gembox'>");
-                var rating = results[i].rating;
-                var p = $("<p class = 'gems'>").text("Rating: " + rating);
-                var exact = $("<img class = 'gems'>");
-                exact.attr("src", results[i].images.fixed_height.url);
+                var p = $("<p class = 'gems'>").text("Rating: " + results[i].rating);
+                var exact = $("<img class = 'gems' data-state='still'>");
+                exact.attr("src", results[i].images.fixed_height_still.url);
+                exact.attr({ 'data-animate': results[i].images.fixed_height.url });
+                exact.attr({ 'data-state': "still" });
+                exact.attr({ 'data-still': results[i].images.fixed_height_still.url });
                 gifDiv.prepend(p);
                 gifDiv.prepend(exact);
                 $(".ben").after(gifDiv);
+
             }
         });
 });
@@ -46,3 +49,15 @@ function start() {
     gifSelect.push(gif)
     buttons();
 };
+
+$(document).on("click", ".gems", function() {
+    console.log("if it dont play it's just loading i promise")
+    var state = $(this).attr("data-state");
+    if (state === "still") {
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
+    } else {
+      $(this).attr("src", $(this).attr("data-still"));
+      $(this).attr("data-state", "still");
+    }
+});
