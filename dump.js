@@ -18,10 +18,10 @@ $(document).on("click", ".pull", function () {
         .then(function (response) {
             var results = response.data;
             for (var i = 0; i < results.length; i++) {
-                var gifDiv = $("<div class = ''>");
+                var gifDiv = $("<div class = 'gembox'>");
                 var rating = results[i].rating;
-                var p = $("<p>").text("Rating: " + rating);
-                var exact = $("<img>");
+                var p = $("<p class = 'gems'>").text("Rating: " + rating);
+                var exact = $("<img class = 'gems'>");
                 exact.attr("src", results[i].images.fixed_height.url);
                 gifDiv.prepend(p);
                 gifDiv.prepend(exact);

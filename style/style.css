@@ -146,6 +146,22 @@ a:hover {
     width: 800px;
 } /* content div */
 
+.gems {
+    border-radius: 6px;
+    border: 1px solid #777777;
+    width: 250px;
+    height: auto;
+    float: left;
+}/*for the gifs*/
+
+.gembox {
+    width: 252px;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 img.reg {
     width: 250px;
     height: auto;
