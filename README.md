@@ -11,3 +11,6 @@ Gifs by default are static images, clicking on one will play the gif. Clicking a
 
 ## API
 [Giphy API] (https://support.giphy.com/hc/en-us/articles/360020283431-Request-A-GIPHY-API-Key)
+
+## Author
+**John Ochs**
