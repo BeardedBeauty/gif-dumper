@@ -10,7 +10,7 @@ All that is required is to type in something into the form, and when 'add' is pr
 Gifs by default are static images, clicking on one will play the gif. Clicking again will pause.
 
 ## API
-* [Giphy API] (https://support.giphy.com/hc/en-us/articles/360020283431-Request-A-GIPHY-API-Key)
+[Giphy API](https://support.giphy.com/hc/en-us/articles/360020283431-Request-A-GIPHY-API-Key)
 
 ## Author
 **• John Ochs**
